@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ваше Имя | Python-разработчик: Telegram боты и парсеры</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --background: #ffffff;
+            --surface: #f9fafb;
+            --border: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка */
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Технологии */
+        #stack {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-item {
+            background: var(--surface);
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        /* Кейсы */
+        .case {
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .case h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .problem, .solution, .tech, .result {
+            margin-bottom: 1.5rem;
+        }
+
+        .problem strong, .solution strong, .tech strong, .result strong {
+            color: var(--text);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .case a {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .case a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Контакты */
+        #contacts {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0 15px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ваше Имя</h1>
+        <p class="tagline">Python-разработчик. Создаю эффективные решения: Telegram боты и парсеры данных</p>
+    </header>
+
+    <section id="stack">
+        <h2>Технологии которые я использую</h2>
+        <div class="tech-grid">
+            <div class="tech-item">Python 3.11+</div>
+            <div class="tech-item">Aiogram 3.x</div>
+            <div class="tech-item">PostgreSQL</div>
+            <div class="tech-item">Docker</div>
+            <div class="tech-item">aiohttp</div>
+            <div class="tech-item">Redis</div>
+        </div>
+    </section>
+<section id="cases">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Решенные задачи</h2>
+
+        <!-- Кейс 1 -->
+        <div class="case">
+            <h3>Автоматизация сбора отзывов для интернет-магазина</h3>
+            
+            <div class="problem">
+                <strong>Проблема клиента:</strong> 
+                85% покупателей не оставляли отзывы. Ручной сбор занимал 10+ часов в неделю. 
+                Негативные отзывы терялись в личных сообщениях.
+            </div>
+
+            <div class="solution">
+                <strong>Решение:</strong>
+                Telegram-бот с админ-панелью для модерации. Автоматически запрашивает отзыв после покупки, 
+                сохраняет в БД, предоставляет интерфейс для одобрения/отклонения.
+            </div>
+
+            <div class="tech">
+                <strong>Техническая реализация:</strong>
+                <ul>
+                    <li>Backend: Python 3.11 + Aiogram 3.x (асинхронность)</li>
+                    <li>База данных: PostgreSQL (схема нормализована)</li>
+                    <li>Архитектура: FSM, middleware для логирования, Docker</li>
+                </ul>
+            </div>
+
+            <div class="result">
+                <strong>Результат:</strong>
+                <ul>
+                    <li>Количество отзывов выросло с 5 до 25+ в неделю</li>
+                    <li>Время работы менеджера сокращено до 1 часа в неделю</li>
+                    <li>Все негативные отзывы теперь обрабатываются</li>
+                </ul>
+            </div>
+
+            <a href="https://github.com/Pharm658-sys/FeedBackerBot" target="_blank">Исходный код проекта</a>
+        </div>
+
+        <!-- Кейс 2 -->
+        <div class="case">
+            <h3>Парсинг данных для анализа цен конкурентов</h3>
+            
+            <div class="problem">
+                <strong>Проблема клиента:</strong> 
+                Не мог отслеживать цены конкурентов в реальном времени. Ручной сбор занимал 6+ часов ежедневно, 
+                данные устаревали до их анализа.
+            </div>
+
+            <div class="solution">
+                <strong>Решение:</strong>
+                Асинхронный парсер, который собирает данные о товарах и ценах, формирует ежедневный отчет в Excel.
+            </div>
+
+            <div class="tech">
+                <strong>Техническая реализация:</strong>
+                <ul>
+                    <li>Парсинг: Python + aiohttp + asyncio</li>
+                    <li>Обработка данных: Pandas для формирования отчетов</li>
+                    <li>Обход блокировок: ротация user-agent, прокси</li>
+                </ul>
+            </div>
+
+            <div class="result">
+                <strong>Результат:</strong>
+                <ul>
+                    <li>Время сбора данных сокращено с 6 часов до 15 минут</li>
+                    <li>Клиент получает ежедневный отчет к 9:00 утра</li>
+                    <li>Возможность мгновенно реагировать на изменение цен</li>
+                </ul>
+            </div>
+
+            <a href="https://github.com/Pharm658-sys/citilink_hunter" target="_blank">Исходный код проекта</a>
+        </div>
+
+        <!-- Кейс 3 -->
+        <div class="case">
+            <h3>Авторизация через Яндекс.Услуги для бота</h3>
+            
+            <div class="problem">
+                <strong>Проблема клиента:</strong> 
+                Нужно было интегрировать авторизацию через Яндекс в Telegram бота для доступа к API сервиса.
+            </div>
+
+            <div class="solution">
+                <strong>Решение:</strong>
+                Модуль авторизации с обработкой OAuth flow, сохранением токенов и автоматическим обновлением.
+            </div>
+
+            <div class="tech">
+                <strong>Техническая реализация:</strong>
+                <ul>
+                    <li>OAuth 2.0 авторизация</li>
+                    <li>Хранение токенов в безопасном виде</li>
+                    <li>Автоматическое обновление access token</li>
+                </ul>
+            </div>
+
+          <div class="result">
+                <strong>Результат:</strong>
+                <ul>
+                    <li>Пользователи могут авторизоваться за 2 клика</li>
+                    <li>Стабильная работа с API Яндекс.Услуг</li>
+                    <li>Безопасное хранение учетных данных</li>
+                </ul>
+            </div>
+
+            <a href="https://github.com/Pharm658-sys/yandex_uslugi_auth" target="_blank">Исходный код проекта</a>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p style="margin: 1rem 0; font-size: 1.1rem;">Готов обсудить ваш проект</p>
+        <p>Telegram: <a href="https://t.me/твой_ник" style="color: var(--primary); text-decoration: none;">@твой_ник</a></p>
+        <p>Email: твоя@почта.ru</p>
+    </section>
+</body>
+</html>
